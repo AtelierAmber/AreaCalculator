@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ShapeArea
 {
   internal interface ICalculator { }
-  internal abstract class Calculator<T> : ICalculator where T : IShapeDesignation
+  public abstract class Calculator<T> : ICalculator where T : IShapeDesignation
   {
     public abstract float CalculateArea(T designation);
   }

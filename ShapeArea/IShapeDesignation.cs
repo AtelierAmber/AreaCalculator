@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 
 namespace ShapeArea
 {
-  internal interface IShapeDesignation { }
+  public interface IShapeDesignation { }
 }
