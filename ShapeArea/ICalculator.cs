@@ -8,6 +8,6 @@ namespace ShapeArea
 {
   internal interface ICalculator<T> where T : IShapeDesignation
   {
-    public static float CalculateArea(T designation) { throw new NotImplementedException(); }
+    public float CalculateArea(T designation) { throw new NotImplementedException(); }
   }
 }
