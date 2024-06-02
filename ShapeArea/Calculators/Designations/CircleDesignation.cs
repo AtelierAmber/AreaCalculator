@@ -6,6 +6,6 @@ namespace ShapeArea.Calculators.Designations
 {
   public struct CircleDesignation : IShapeDesignation
   {
-    float radius;
+    public float radius;
   }
 }

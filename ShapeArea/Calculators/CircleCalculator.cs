@@ -11,7 +11,12 @@ namespace ShapeArea.Calculators
 
     public override float CalculateArea(CircleDesignation designation)
     {
-      throw new NotImplementedException();
+      CalculatorParameters parameters = ShapeCalculator.calcParameters;
+
+      float areaUnrounded = designation.radius * designation.radius * parameters.PI;
+      float areaRounded = ShapeCalculator.RoundByParameters(areaUnrounded);
+
+      return areaRounded;
     }
   }
 }

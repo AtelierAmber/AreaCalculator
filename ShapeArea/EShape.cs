@@ -6,6 +6,7 @@ namespace ShapeArea
 {
   public enum EShape
   {
+    INVALID,
     CIRCLE
   }
 }

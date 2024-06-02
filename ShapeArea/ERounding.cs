@@ -10,6 +10,7 @@ namespace ShapeArea
   {
     TRUNCATE, // Truncate
     UP, // Round value up
-    DOWN // Round value down
+    DOWN, // Round value down
+    DEFAULT // Round like normal (5 up 4 down
   }
 }

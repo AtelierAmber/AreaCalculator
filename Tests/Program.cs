@@ -1,7 +1,7 @@
 ﻿Console.WriteLine("Starting Area Testing");
 
 // Setup Parameters
-ShapeArea.ShapeArea.SetupDefaultParameters(new()
+ShapeArea.ShapeCalculator.SetupDefaultParameters(new()
 {
   PI = MathF.PI,
   decimalPlaces = 2,
