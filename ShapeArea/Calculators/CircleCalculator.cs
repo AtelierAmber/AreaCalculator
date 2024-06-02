@@ -9,6 +9,12 @@ namespace ShapeArea.Calculators
   {
     public CircleCalculator() { }
 
+    /// <summary>
+    /// Calculates the area of the circle described by the param designation. Uses rounding
+    /// rules specified in <see cref="ShapeCalculator.calcParameters"/>.
+    /// </summary>
+    /// <param name="designation">A circle described by its radius</param>
+    /// <returns>The area (PI * radius squared) rounded based on rounding rules in <see cref="ShapeCalculator.calcParameters"/></returns>
     public override float CalculateArea(CircleDesignation designation)
     {
       CalculatorParameters parameters = ShapeCalculator.calcParameters;

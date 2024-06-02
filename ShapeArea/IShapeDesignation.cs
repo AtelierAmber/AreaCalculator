@@ -6,5 +6,8 @@ using System.Threading.Tasks;
 
 namespace ShapeArea
 {
+  /// <summary>
+  /// Used primarily for calculator template paramters
+  /// </summary>
   public interface IShapeDesignation { }
 }

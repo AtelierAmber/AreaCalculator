@@ -18,6 +18,17 @@ namespace ShapeArea
       calculatorShapes.Add(typeof(CircleDesignation), EShape.CIRCLE);
     }
 
+
+    /// <summary>
+    /// Calculates the area of passed in shapeDesignation. Will automatically select the correct
+    /// calculator from the available calculators assuming the shapeDesignation has an associated calculator
+    /// </summary>
+    /// <typeparam name="S">Type of the shapeDesignation parameter</typeparam>
+    /// <param name="shapeDesignation">A designation of the shape with included parameters. In the instance of
+    /// a circle, it includes only its radius</param>
+    /// <returns>Returns the area of the passed in shapeDesignation based on the initialized calculators</returns>
+    /// <exception cref="NotSupportedException">Will throw this exception if the passed in 
+    /// shapeDesignation does not have a suitable calculator</exception>
     public static float CalculateArea<S>(S shapeDesignation) where S : IShapeDesignation
     {
       Calculator<S>? calculator = (Calculator<S>?)calculators.GetValueOrDefault(calculatorShapes.GetValueOrDefault(typeof(S), EShape.INVALID), null);
