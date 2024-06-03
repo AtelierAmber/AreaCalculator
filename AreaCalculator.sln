@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeArea", "ShapeArea\ShapeArea.csproj", "{AFD06DE4-5866-42AC-BBC4-14CE84A1F337}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShapeArea", "ShapeArea\ShapeArea.csproj", "{AFD06DE4-5866-42AC-BBC4-14CE84A1F337}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{34028492-7767-44CF-8D2E-7BB116626FB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{34028492-7767-44CF-8D2E-7BB116626FB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{778F197D-629D-4FA5-8034-B57D00FFF32D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{34028492-7767-44CF-8D2E-7BB116626FB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34028492-7767-44CF-8D2E-7BB116626FB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34028492-7767-44CF-8D2E-7BB116626FB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{778F197D-629D-4FA5-8034-B57D00FFF32D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{778F197D-629D-4FA5-8034-B57D00FFF32D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{778F197D-629D-4FA5-8034-B57D00FFF32D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{778F197D-629D-4FA5-8034-B57D00FFF32D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
