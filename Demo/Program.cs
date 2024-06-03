@@ -11,7 +11,7 @@ ShapeCalculator.Setup(new()
 });
 while (running)
 {
-  Console.WriteLine("Please enter the radius of the circle or type quit to quit: ");
+  Console.WriteLine("Please enter the radius of the sphere or type quit to quit: ");
   try
   {
     string? input = Console.ReadLine();
@@ -21,7 +21,7 @@ while (running)
       break;
     }
     float radius = Convert.ToSingle(input);
-    float area = ShapeCalculator.CalculateArea(new CircleDesignation() { radius = radius });
+    float area = ShapeCalculator.CalculateArea(new SphereDesignation() { radius = radius });
     Console.WriteLine("The area is " + area + " when rounded to 2 decimal places");
   }
   catch (Exception ex)

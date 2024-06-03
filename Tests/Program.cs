@@ -12,26 +12,26 @@ ShapeArea.ShapeCalculator.Setup(new()
 });
 
 // Assert basic functionality
-CircleDesignation circle = new()
+SphereDesignation sphere = new()
 {
   radius = 1
 };
-Debug.Assert(ShapeArea.ShapeCalculator.CalculateArea(circle) == 3.14f, "Basic test failed.");
+Debug.Assert(ShapeArea.ShapeCalculator.CalculateArea(sphere) == 12.56f, "Basic test failed.");
 // Test decimal places
 ShapeArea.ShapeCalculator.CalcParameters.decimalPlaces = 4;
-Debug.Assert(ShapeArea.ShapeCalculator.CalculateArea(circle) == 3.1415f, "Decimal places test failed.");
+Debug.Assert(ShapeArea.ShapeCalculator.CalculateArea(sphere) == 12.5663f, "Decimal places test failed.");
 // Test rounding up
 ShapeArea.ShapeCalculator.CalcParameters.rounding = ShapeArea.ERounding.UP;
-Debug.Assert(ShapeArea.ShapeCalculator.CalculateArea(circle) == 3.1416f, "Round up test failed.");
+Debug.Assert(ShapeArea.ShapeCalculator.CalculateArea(sphere) == 12.5664f, "Round up test failed.");
 // Test rounding down
 ShapeArea.ShapeCalculator.CalcParameters.rounding = ShapeArea.ERounding.DOWN;
-Debug.Assert(ShapeArea.ShapeCalculator.CalculateArea(circle) == 3.1415f, "Round down test failed.");
+Debug.Assert(ShapeArea.ShapeCalculator.CalculateArea(sphere) == 12.5663f, "Round down test failed.");
 // Test Default rounding
 ShapeArea.ShapeCalculator.CalcParameters.rounding = ShapeArea.ERounding.DEFAULT;
-Debug.Assert(ShapeArea.ShapeCalculator.CalculateArea(circle) == 3.1416f, "Default Rounding test failed.");
+Debug.Assert(ShapeArea.ShapeCalculator.CalculateArea(sphere) == 12.5664f, "Default Rounding test failed.");
 // Test radius
 ShapeArea.ShapeCalculator.CalcParameters.rounding = ShapeArea.ERounding.TRUNCATE;
-circle.radius = 4;
-Debug.Assert(ShapeArea.ShapeCalculator.CalculateArea(circle) == 50.2654f, "Radius test failed.");
+sphere.radius = 4;
+Debug.Assert(ShapeArea.ShapeCalculator.CalculateArea(sphere) == 201.0619f, "Radius test failed.");
 
 Console.WriteLine("Tests Passed");

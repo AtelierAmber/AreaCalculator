@@ -20,9 +20,9 @@ namespace ShapeArea
       }
       setup = true;
       CalcParameters = param;
-      // Initialize Circle Calculator
-      calculators.Add(EShape.CIRCLE, new CircleCalculator());
-      calculatorShapes.Add(typeof(CircleDesignation), EShape.CIRCLE);
+      // Initialize Sphere Calculator
+      calculators.Add(EShape.SHPERE, new SphereCalculator());
+      calculatorShapes.Add(typeof(SphereDesignation), EShape.SHPERE);
     }
 
 
@@ -32,7 +32,7 @@ namespace ShapeArea
     /// </summary>
     /// <typeparam name="S">Type of the shapeDesignation parameter</typeparam>
     /// <param name="shapeDesignation">A designation of the shape with included parameters. In the instance of
-    /// a circle, it includes only its radius</param>
+    /// a sphere, it includes only its radius</param>
     /// <returns>Returns the area of the passed in shapeDesignation based on the initialized calculators</returns>
     /// <exception cref="NotSupportedException">Will throw this exception if the passed in 
     /// shapeDesignation does not have a suitable calculator</exception>

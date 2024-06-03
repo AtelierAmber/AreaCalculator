@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ShapeArea.Calculators.Designations
 {
-  public struct CircleDesignation : IShapeDesignation
+  public struct SphereDesignation : IShapeDesignation
   {
     public float radius;
   }
