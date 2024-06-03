@@ -17,7 +17,7 @@ namespace ShapeArea.Calculators
     /// <returns>The area (PI * radius squared) rounded based on rounding rules in <see cref="ShapeCalculator.calcParameters"/></returns>
     public override float CalculateArea(CircleDesignation designation)
     {
-      CalculatorParameters parameters = ShapeCalculator.calcParameters;
+      CalculatorParameters parameters = ShapeCalculator.CalcParameters;
 
       float areaUnrounded = designation.radius * designation.radius * parameters.PI;
       float areaRounded = ShapeCalculator.RoundByParameters(areaUnrounded);

@@ -9,10 +9,17 @@ namespace ShapeArea
     private static Dictionary<EShape, ICalculator> calculators = new();
     private static Dictionary<Type, EShape> calculatorShapes = new();
 
-    internal static CalculatorParameters calcParameters {  get; private set; }
+    private static bool setup = false;
+
+    public static CalculatorParameters CalcParameters;
     public static void Setup(CalculatorParameters param)
     {
-      calcParameters = param;
+      if (setup)
+      {
+        return;
+      }
+      setup = true;
+      CalcParameters = param;
       // Initialize Circle Calculator
       calculators.Add(EShape.CIRCLE, new CircleCalculator());
       calculatorShapes.Add(typeof(CircleDesignation), EShape.CIRCLE);
@@ -43,9 +50,9 @@ namespace ShapeArea
     internal static float RoundByParameters(float val)
     {
       // Used to scale the rounded value for rounding
-      float scalar = MathF.Pow(10, calcParameters.decimalPlaces);
+      float scalar = MathF.Pow(10, CalcParameters.decimalPlaces);
 
-      switch (calcParameters.rounding)
+      switch (CalcParameters.rounding)
       {
         case ERounding.TRUNCATE:
         case ERounding.DOWN:
